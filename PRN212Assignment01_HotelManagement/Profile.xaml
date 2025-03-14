@@ -15,6 +15,7 @@
         <TextBox FontSize="20" HorizontalAlignment="Left" Margin="216,161,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="216"/>
         <TextBox FontSize="20" HorizontalAlignment="Left" Margin="216,207,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="216"/>
         <Button Content="Close" FontSize="20" HorizontalAlignment="Left" Margin="635,365,0,0" VerticalAlignment="Top" Width="85"/>
+        <Button Content="Save" FontSize="20" HorizontalAlignment="Left" Margin="524,365,0,0" VerticalAlignment="Top" Width="85"/>
 
     </Grid>
 </Window>
