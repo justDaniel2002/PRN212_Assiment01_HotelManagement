@@ -1,0 +1,34 @@
+﻿<Window x:Class="PRN212Assignment01_HotelManagement.RoomManagement"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PRN212Assignment01_HotelManagement"
+        mc:Ignorable="d"
+        FontSize="14"
+        Title="RoomManagement" Height="450" Width="800">
+    <Grid>
+        <ListView Height="200" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,0,0,234">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label Content="Room Number:" HorizontalAlignment="Left" Margin="100,217,0,0" VerticalAlignment="Top"/>
+        <Label Content="Room Description:" HorizontalAlignment="Left" Margin="100,251,0,0" VerticalAlignment="Top"/>
+        <Label Content="Max Capacity:" HorizontalAlignment="Left" Margin="100,280,0,0" VerticalAlignment="Top"/>
+        <Label Content="Status:" HorizontalAlignment="Left" Margin="100,309,0,0" VerticalAlignment="Top"/>
+        <Label Content="Price Per Date:" HorizontalAlignment="Left" Margin="100,338,0,0" VerticalAlignment="Top"/>
+        <Label Content="Rooom Type:" HorizontalAlignment="Left" Margin="100,372,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="240,221,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="239"/>
+        <TextBox HorizontalAlignment="Left" Margin="240,255,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="239"/>
+        <TextBox HorizontalAlignment="Left" Margin="240,284,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="239"/>
+        <ComboBox HorizontalAlignment="Left" Margin="240,313,0,0" VerticalAlignment="Top" Width="239"/>
+        <ComboBox HorizontalAlignment="Left" Margin="240,376,0,0" VerticalAlignment="Top" Width="239"/>
+        <DatePicker HorizontalAlignment="Left" Margin="240,343,0,0" VerticalAlignment="Top" Width="239"/>
+        <Button Content="Add" HorizontalAlignment="Left" Margin="565,255,0,0" VerticalAlignment="Top" Width="89"/>
+        <Button Content="Edit" HorizontalAlignment="Left" Margin="565,288,0,0" VerticalAlignment="Top" Width="89"/>
+
+    </Grid>
+</Window>
