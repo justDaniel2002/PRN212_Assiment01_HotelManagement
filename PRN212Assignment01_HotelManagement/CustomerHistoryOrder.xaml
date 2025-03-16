@@ -1,0 +1,23 @@
+﻿<Window x:Class="PRN212Assignment01_HotelManagement.CustomerHistoryOrder"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PRN212Assignment01_HotelManagement"
+        mc:Ignorable="d"
+        Title="CustomerHistoryOrder" Height="450" Width="800">
+    <Grid>
+        <ListView x:Name="lvOrder" Height="250" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,0,0,184">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <TextBox x:Name="tbRoomNumber" HorizontalAlignment="Left" Margin="157,280,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="161"/>
+        <Label Content="Room number:" HorizontalAlignment="Left" Margin="63,272,0,0" VerticalAlignment="Top"/>
+        <Button Content="Search" Click="Button_Click_1" HorizontalAlignment="Left" Margin="400,337,0,0" VerticalAlignment="Top" Width="69"/>
+        <Button Content="Reset" Click="Button_Click" HorizontalAlignment="Left" Margin="494,337,0,0" VerticalAlignment="Top" Width="69"/>
+
+    </Grid>
+</Window>

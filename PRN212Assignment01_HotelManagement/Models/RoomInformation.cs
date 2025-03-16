@@ -8,7 +8,7 @@ namespace PRN212Assignment01_HotelManagement.Models
 {
     public class RoomInformation
     {
-        public int? RoomID { get; set; }
+        public Guid? RoomID { get; set; }
         public string RoomNumber { get; set; }
         public string RoomDescription { get; set; }
         public int? RoomMaxCapacity { get; set; }

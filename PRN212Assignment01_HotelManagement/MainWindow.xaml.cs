@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using Microsoft.Extensions.Configuration;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -32,11 +33,21 @@ public partial class MainWindow : Window
             return;
         }
 
-        if(email == "admin" && password == "admin")
+        var config = new ConfigurationBuilder()
+            .SetBasePath(AppContext.BaseDirectory) // Set the base path for configuration file
+            .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true) // Load JSON file
+            .Build();
+
+        // Get a string from configuration
+        string adminEmail = config["Admin:email"];
+        string adminPassword = config["Admin:password"];
+
+
+        if (email.Equals(adminEmail) && password.Equals(adminPassword))
         {
             MessageBox.Show("Login successfully");
-            /*var adminWindow = new AdminWindow();
-            adminWindow.Show();*/
+            var adminWindow = new AdminWindow();
+            adminWindow.Show();
             this.Close();
         }
         else
@@ -46,6 +57,9 @@ public partial class MainWindow : Window
             if(customer != null)
             {
                 DataManagement.DataManagement.customer = customer;
+                CustomerWindow customerWindow = new CustomerWindow();
+                customerWindow.Show();
+                this.Close();
             }
             else MessageBox.Show("Login failed");
         }

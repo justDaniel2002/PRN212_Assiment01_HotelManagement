@@ -7,16 +7,20 @@
         mc:Ignorable="d"
         Title="CustomerManagement" Height="450" Width="800">
     <Grid>
-        <ListView Height="200" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,0,0,234">
+        <ListView x:Name="lvCus" Height="200" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,0,0,234">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn/>
+                    <GridViewColumn Header="ID" DisplayMemberBinding="{Binding CustomerFullName}" Width="50"/>
+                    <GridViewColumn Header="Number" DisplayMemberBinding="{Binding Telephone}" Width="150"/>
+                    <GridViewColumn Header="Capacity" DisplayMemberBinding="{Binding EmailAddress}" Width="100"/>
+                    <GridViewColumn Header="Price" DisplayMemberBinding="{Binding CustomerBirthday}" Width="100"/>
+                    <GridViewColumn Header="Room Type" DisplayMemberBinding="{Binding CustomerStatus}" Width="100"/>
                 </GridView>
             </ListView.View>
         </ListView>
-        <ComboBox HorizontalAlignment="Left" Margin="248,236,0,0" VerticalAlignment="Top" Width="180"/>
+        <ComboBox Name="cbCus" SelectionChanged="cbCus_SelectionChanged" HorizontalAlignment="Left" Margin="248,236,0,0" VerticalAlignment="Top" Width="180"/>
         <Label Content="Customer:" FontSize="14" HorizontalAlignment="Left" Margin="170,233,0,0" VerticalAlignment="Top"/>
-        <Button Content="Change Status" HorizontalAlignment="Left" Margin="251,277,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="20" Width="96">
+        <Button Click="Button_Click" Content="Change Status" HorizontalAlignment="Left" Margin="251,277,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="20" Width="96">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
